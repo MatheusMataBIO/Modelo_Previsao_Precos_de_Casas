@@ -22,7 +22,7 @@ Este documento reúne o plano de trabalho e o estado final da entrega. Os itens 
 | 8. Deploy, monitoramento e versionamento | Sem provisionamento ou automação | Arquitetura, publicação, monitoramento, versionamento, reentreinamento e reversão |
 | 9. Comunicação | Relatório, gráficos e README de execução | Síntese executiva e recomendações |
 
-Conforme o README e o escopo acordado, empacotamento, API, Docker, deploy e aprendizado contínuo serão somente documentados. Não há serviço ou contêiner executável nesta entrega. Os modelos e as previsões locais já foram produzidos nos notebooks 01 a 06. A publicação do repositório permanece uma etapa posterior.
+Conforme o README e o escopo acordado, empacotamento, API, Docker, deploy e aprendizado contínuo serão somente documentados. Não há serviço ou contêiner executável nesta entrega. Os modelos e as previsões locais já foram produzidos nos notebooks 01 a 06. O projeto está publicado em [Modelo_Previsao_Pre-os_de_Casas](https://github.com/MatheusMataBIO/Modelo_Previsao_Pre-os_de_Casas).
 
 ## 1. EDA — Análise exploratória dos dados
 
@@ -188,11 +188,42 @@ O desenvolvimento analítico é feito em Python com Jupyter Notebook. Os noteboo
 
 ```text
 .
-├── README.md
-├── PLANO_PROJETO.md
-├── .gitignore
+├── artifacts/
+│   ├── .gitkeep
+│   ├── configuracao_modelo_selecionado.json
+│   ├── model_card.json
+│   ├── modelo_avaliado.joblib
+│   └── ridge_avaliado.joblib
+├── data/
+│   ├── processed/
+│   │   ├── .gitkeep
+│   │   ├── contrato_features.json
+│   │   ├── cv_manifest.csv
+│   │   ├── features_futuros.csv
+│   │   ├── features_historico.csv
+│   │   ├── futuros_com_demografia.csv
+│   │   ├── identificacao_alvo_historico.csv
+│   │   ├── imoveis_com_demografia.csv
+│   │   └── split_manifest.csv
+│   └── raw/
+│       ├── future_unseen_examples.csv
+│       ├── kc_house_data.csv
+│       └── zipcode_demographics.csv
+├── docs/
+│   ├── baseline_summary.md
+│   ├── data_dictionary.md
+│   ├── deployment.md
+│   ├── eda_summary.md
+│   ├── enunciado_desafio.md
+│   ├── evaluation_summary.md
+│   ├── executive_summary.md
+│   ├── feature_engineering_summary.md
+│   ├── merge_eda_summary.md
+│   ├── model_card.md
+│   ├── model_selection_summary.md
+│   ├── packaging_api.md
+│   └── project_audit.md
 ├── notebooks/
-│   ├── README.md
 │   ├── 01_eda.ipynb
 │   ├── 02_merge_eda_complementar.ipynb
 │   ├── 03_feature_engineering.ipynb
@@ -201,23 +232,134 @@ O desenvolvimento analítico é feito em Python com Jupyter Notebook. Os noteboo
 │   ├── 06_avaliacao_explicabilidade.ipynb
 │   ├── 07_empacotamento_api.ipynb
 │   ├── 08_deploy_monitoramento.ipynb
-│   └── 09_comunicacao_stakeholders.ipynb
-├── data/
-│   ├── raw/
-│   │   ├── kc_house_data.csv
-│   │   ├── zipcode_demographics.csv
-│   │   └── future_unseen_examples.csv
-│   └── processed/
-├── artifacts/
+│   ├── 09_comunicacao_stakeholders.ipynb
+│   └── README.md
 ├── reports/
+│   ├── archive/
+│   │   ├── eda_temporal_anterior/
+│   │   │   ├── eda_quality_development.csv
+│   │   │   ├── eda_summary_development.csv
+│   │   │   ├── README.md
+│   │   │   ├── split_manifest.csv
+│   │   │   └── split_protocol.json
+│   │   └── selecao_v1/
+│   │       ├── 05_selecao_modelo.ipynb
+│   │       ├── configuracao_modelo_selecionado.json
+│   │       ├── model_selection_summary.md
+│   │       ├── selecao_comparacao_inicial.csv
+│   │       ├── selecao_configuracoes.json
+│   │       ├── selecao_experimentos.csv
+│   │       ├── selecao_features.csv
+│   │       ├── selecao_hipoteses.csv
+│   │       ├── selecao_janelas_final.csv
+│   │       ├── selecao_mae_por_janela.png
+│   │       ├── selecao_modelos_iniciais.png
+│   │       ├── selecao_optuna_trials.csv
+│   │       ├── selecao_previsoes_cv.csv
+│   │       └── selecao_transformacao_alvo.csv
 │   ├── figures/
+│   │   ├── .gitkeep
+│   │   ├── avaliacao_erros.png
+│   │   ├── avaliacao_importancias.png
+│   │   ├── avaliacao_segmentos.png
+│   │   ├── avaliacao_shap_local.png
+│   │   ├── baseline_cv_temporal.png
+│   │   ├── baseline_mae_por_janela.png
+│   │   ├── eda_area_grade.png
+│   │   ├── eda_correlations.png
+│   │   ├── eda_location.png
+│   │   ├── eda_pos_merge_faixas_renda.png
+│   │   ├── eda_pos_merge_indicadores_preco.png
+│   │   ├── eda_pos_merge_outliers_area.png
+│   │   ├── eda_pos_merge_redundancia.png
+│   │   ├── eda_pos_merge_vendas_mensais.png
+│   │   ├── eda_pos_merge_vendas_por_cep.png
+│   │   ├── eda_price_distribution.png
+│   │   ├── esquema_deploy.png
+│   │   ├── esquema_inferencia.png
+│   │   ├── esquema_llm.png
+│   │   ├── executivo_mae.png
+│   │   ├── executivo_segmentos.png
+│   │   ├── features_areas_log.png
+│   │   ├── selecao_mae_por_janela.png
+│   │   └── selecao_modelos_iniciais.png
 │   ├── metrics/
-│   └── predictions/
-└── docs/
-    ├── data_dictionary.md
-    ├── model_card.md
-    ├── deployment.md
-    └── executive_summary.md
+│   │   ├── .gitkeep
+│   │   ├── auditoria_execucao_notebooks.json
+│   │   ├── auditoria_projeto.json
+│   │   ├── avaliacao_amostra_importancia.csv
+│   │   ├── avaliacao_importancias.csv
+│   │   ├── avaliacao_maiores_erros.csv
+│   │   ├── avaliacao_metricas.csv
+│   │   ├── avaliacao_por_faixa_preco.csv
+│   │   ├── avaliacao_por_grade.csv
+│   │   ├── avaliacao_por_waterfront.csv
+│   │   ├── avaliacao_por_zipcode.csv
+│   │   ├── avaliacao_registro.json
+│   │   ├── avaliacao_shap_local.csv
+│   │   ├── baseline_cv_janelas.csv
+│   │   ├── baseline_cv_previsoes.csv
+│   │   ├── baseline_cv_resultados.csv
+│   │   ├── baseline_cv_resumo.csv
+│   │   ├── baseline_mape_janelas.csv
+│   │   ├── baseline_mape_resumo.csv
+│   │   ├── baseline_protocolo.json
+│   │   ├── eda_findings.json
+│   │   ├── eda_overview.csv
+│   │   ├── eda_pos_merge_associacoes.csv
+│   │   ├── eda_pos_merge_concentracao_ceps.csv
+│   │   ├── eda_pos_merge_faixas_renda.csv
+│   │   ├── eda_pos_merge_outliers_boxplot.csv
+│   │   ├── eda_pos_merge_outliers_diagnostico.csv
+│   │   ├── eda_pos_merge_outliers_perfil.csv
+│   │   ├── eda_pos_merge_outliers_resumo.csv
+│   │   ├── eda_pos_merge_por_cep.csv
+│   │   ├── eda_pos_merge_redundancia.csv
+│   │   ├── eda_pos_merge_vendas_mensais.csv
+│   │   ├── eda_price_correlations.csv
+│   │   ├── eda_quality_full_history.csv
+│   │   ├── eda_schema.csv
+│   │   ├── eda_summary_full_history.csv
+│   │   ├── eda_zipcode_coverage.csv
+│   │   ├── executivo_exemplos.csv
+│   │   ├── features_ausencias.csv
+│   │   ├── features_catalogo.csv
+│   │   ├── features_diagnostico.csv
+│   │   ├── features_plano_pipeline.csv
+│   │   ├── features_resumo_derivadas.csv
+│   │   ├── merge_integridade.csv
+│   │   ├── merge_registro.json
+│   │   ├── selecao_comparacao_inicial.csv
+│   │   ├── selecao_configuracoes.json
+│   │   ├── selecao_experimentos.csv
+│   │   ├── selecao_features.csv
+│   │   ├── selecao_hipoteses.csv
+│   │   ├── selecao_janelas_final.csv
+│   │   ├── selecao_mape_janelas.csv
+│   │   ├── selecao_mape_resumo.csv
+│   │   ├── selecao_optuna_trials.csv
+│   │   ├── selecao_previsoes_cv.csv
+│   │   └── selecao_transformacao_alvo.csv
+│   ├── pdf_preview/
+│   │   ├── pagina_01.png
+│   │   ├── pagina_02.png
+│   │   ├── pagina_03.png
+│   │   ├── pagina_04.png
+│   │   ├── pagina_05.png
+│   │   ├── pagina_06.png
+│   │   ├── pagina_07.png
+│   │   └── pagina_08.png
+│   ├── predictions/
+│   │   ├── .gitkeep
+│   │   ├── avaliacao_teste.csv
+│   │   ├── future_unseen_predictions.csv
+│   │   └── README.md
+│   └── relatorio_executivo.pdf
+├── .gitattributes
+├── .gitignore
+├── PLANO_PROJETO.md
+├── README.md
+└── requirements.txt
 ```
 
 Os notebooks 07 a 09 organizam o planejamento operacional e a comunicação. Os documentos em `docs/` consolidam as análises e a documentação da entrega. Código de API, módulos de serviço e Dockerfile ficam fora da implementação desta entrega; sua organização e comportamento estão documentados.

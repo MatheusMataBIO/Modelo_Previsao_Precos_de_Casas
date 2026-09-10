@@ -6,6 +6,21 @@ Estimar preços de imóveis da região de Seattle a partir de características f
 
 **Resultado:** LightGBM com MAE de teste de **74.089,41**, redução de **27,48%** frente ao Ridge nas mesmas vendas. Foram exportadas [100 previsões com todas as características originais](reports/predictions/future_unseen_predictions.csv). O resultado é uma avaliação histórica; não há aprovação para uso automático em produção.
 
+## Dataset com os preços previstos
+
+**Arquivo final:** [reports/predictions/future_unseen_predictions.csv](reports/predictions/future_unseen_predictions.csv).
+
+Esse CSV contém os **100 imóveis** de `data/raw/future_unseen_examples.csv`, na mesma ordem, com **21 colunas**:
+
+- As **18 características originais** de cada imóvel, com seus valores preservados.
+- **`predicted_price`**: preço estimado pelo LightGBM, em USD conforme a premissa monetária do projeto.
+- **`source_row`**: posição da linha no arquivo original, começando em zero e sem contar o cabeçalho.
+- **`model_version`**: versão do modelo utilizado (`avaliacao_v1`).
+
+O arquivo é gerado pelo [notebook 06 — avaliação e explicabilidade](notebooks/06_avaliacao_explicabilidade.ipynb), na seção de previsão dos exemplos futuros. No GitHub, abra o link do CSV acima e use **Download raw file** para baixá-lo.
+
+**Arquivo de avaliação separado:** [reports/predictions/avaliacao_teste.csv](reports/predictions/avaliacao_teste.csv) contém as 4.331 vendas de teste, com preço real e previsões de LightGBM e Ridge. As métricas vêm desse teste; os 100 exemplos futuros não possuem preço real para avaliação.
+
 ## Dados e abordagem
 
 | Arquivo em `data/raw/` | Conteúdo | Linhas |
@@ -74,6 +89,191 @@ Detalhes: [avaliação](docs/evaluation_summary.md), [ficha do modelo](docs/mode
 **API, Docker, infraestrutura, MLflow e API externa de LLM são propostas documentais, sem implementação ou publicação.** A LLM proposta redigiria explicações a partir de fatos verificados; o preço continuaria sendo calculado pelo LightGBM. Os diagramas e o reentreinamento proposto estão no notebook 08 e em [deployment.md](docs/deployment.md).
 
 `data/raw/` preserva os arquivos recebidos; `data/processed/` guarda merges, features e partições; `artifacts/` contém os pipelines e contratos; `reports/` contém métricas, gráficos e previsões. `reports/archive/` guarda resultados antigos, fora da avaliação atual.
+
+## Estrutura dos arquivos
+
+A árvore abaixo lista os arquivos versionados da entrega, incluindo dados processados, modelos, previsões, relatórios e documentação. `.venv/`, `.git/` e checkpoints locais não fazem parte dessa listagem. `reports/archive/` contém resultados antigos, separados dos relatórios ativos.
+
+<details>
+<summary>Expandir a estrutura completa do projeto</summary>
+
+```text
+.
+├── artifacts/
+│   ├── .gitkeep
+│   ├── configuracao_modelo_selecionado.json
+│   ├── model_card.json
+│   ├── modelo_avaliado.joblib
+│   └── ridge_avaliado.joblib
+├── data/
+│   ├── processed/
+│   │   ├── .gitkeep
+│   │   ├── contrato_features.json
+│   │   ├── cv_manifest.csv
+│   │   ├── features_futuros.csv
+│   │   ├── features_historico.csv
+│   │   ├── futuros_com_demografia.csv
+│   │   ├── identificacao_alvo_historico.csv
+│   │   ├── imoveis_com_demografia.csv
+│   │   └── split_manifest.csv
+│   └── raw/
+│       ├── future_unseen_examples.csv
+│       ├── kc_house_data.csv
+│       └── zipcode_demographics.csv
+├── docs/
+│   ├── baseline_summary.md
+│   ├── data_dictionary.md
+│   ├── deployment.md
+│   ├── eda_summary.md
+│   ├── enunciado_desafio.md
+│   ├── evaluation_summary.md
+│   ├── executive_summary.md
+│   ├── feature_engineering_summary.md
+│   ├── merge_eda_summary.md
+│   ├── model_card.md
+│   ├── model_selection_summary.md
+│   ├── packaging_api.md
+│   └── project_audit.md
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_merge_eda_complementar.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   ├── 04_split_baseline.ipynb
+│   ├── 05_selecao_modelo.ipynb
+│   ├── 06_avaliacao_explicabilidade.ipynb
+│   ├── 07_empacotamento_api.ipynb
+│   ├── 08_deploy_monitoramento.ipynb
+│   ├── 09_comunicacao_stakeholders.ipynb
+│   └── README.md
+├── reports/
+│   ├── archive/
+│   │   ├── eda_temporal_anterior/
+│   │   │   ├── eda_quality_development.csv
+│   │   │   ├── eda_summary_development.csv
+│   │   │   ├── README.md
+│   │   │   ├── split_manifest.csv
+│   │   │   └── split_protocol.json
+│   │   └── selecao_v1/
+│   │       ├── 05_selecao_modelo.ipynb
+│   │       ├── configuracao_modelo_selecionado.json
+│   │       ├── model_selection_summary.md
+│   │       ├── selecao_comparacao_inicial.csv
+│   │       ├── selecao_configuracoes.json
+│   │       ├── selecao_experimentos.csv
+│   │       ├── selecao_features.csv
+│   │       ├── selecao_hipoteses.csv
+│   │       ├── selecao_janelas_final.csv
+│   │       ├── selecao_mae_por_janela.png
+│   │       ├── selecao_modelos_iniciais.png
+│   │       ├── selecao_optuna_trials.csv
+│   │       ├── selecao_previsoes_cv.csv
+│   │       └── selecao_transformacao_alvo.csv
+│   ├── figures/
+│   │   ├── .gitkeep
+│   │   ├── avaliacao_erros.png
+│   │   ├── avaliacao_importancias.png
+│   │   ├── avaliacao_segmentos.png
+│   │   ├── avaliacao_shap_local.png
+│   │   ├── baseline_cv_temporal.png
+│   │   ├── baseline_mae_por_janela.png
+│   │   ├── eda_area_grade.png
+│   │   ├── eda_correlations.png
+│   │   ├── eda_location.png
+│   │   ├── eda_pos_merge_faixas_renda.png
+│   │   ├── eda_pos_merge_indicadores_preco.png
+│   │   ├── eda_pos_merge_outliers_area.png
+│   │   ├── eda_pos_merge_redundancia.png
+│   │   ├── eda_pos_merge_vendas_mensais.png
+│   │   ├── eda_pos_merge_vendas_por_cep.png
+│   │   ├── eda_price_distribution.png
+│   │   ├── esquema_deploy.png
+│   │   ├── esquema_inferencia.png
+│   │   ├── esquema_llm.png
+│   │   ├── executivo_mae.png
+│   │   ├── executivo_segmentos.png
+│   │   ├── features_areas_log.png
+│   │   ├── selecao_mae_por_janela.png
+│   │   └── selecao_modelos_iniciais.png
+│   ├── metrics/
+│   │   ├── .gitkeep
+│   │   ├── auditoria_execucao_notebooks.json
+│   │   ├── auditoria_projeto.json
+│   │   ├── avaliacao_amostra_importancia.csv
+│   │   ├── avaliacao_importancias.csv
+│   │   ├── avaliacao_maiores_erros.csv
+│   │   ├── avaliacao_metricas.csv
+│   │   ├── avaliacao_por_faixa_preco.csv
+│   │   ├── avaliacao_por_grade.csv
+│   │   ├── avaliacao_por_waterfront.csv
+│   │   ├── avaliacao_por_zipcode.csv
+│   │   ├── avaliacao_registro.json
+│   │   ├── avaliacao_shap_local.csv
+│   │   ├── baseline_cv_janelas.csv
+│   │   ├── baseline_cv_previsoes.csv
+│   │   ├── baseline_cv_resultados.csv
+│   │   ├── baseline_cv_resumo.csv
+│   │   ├── baseline_mape_janelas.csv
+│   │   ├── baseline_mape_resumo.csv
+│   │   ├── baseline_protocolo.json
+│   │   ├── eda_findings.json
+│   │   ├── eda_overview.csv
+│   │   ├── eda_pos_merge_associacoes.csv
+│   │   ├── eda_pos_merge_concentracao_ceps.csv
+│   │   ├── eda_pos_merge_faixas_renda.csv
+│   │   ├── eda_pos_merge_outliers_boxplot.csv
+│   │   ├── eda_pos_merge_outliers_diagnostico.csv
+│   │   ├── eda_pos_merge_outliers_perfil.csv
+│   │   ├── eda_pos_merge_outliers_resumo.csv
+│   │   ├── eda_pos_merge_por_cep.csv
+│   │   ├── eda_pos_merge_redundancia.csv
+│   │   ├── eda_pos_merge_vendas_mensais.csv
+│   │   ├── eda_price_correlations.csv
+│   │   ├── eda_quality_full_history.csv
+│   │   ├── eda_schema.csv
+│   │   ├── eda_summary_full_history.csv
+│   │   ├── eda_zipcode_coverage.csv
+│   │   ├── executivo_exemplos.csv
+│   │   ├── features_ausencias.csv
+│   │   ├── features_catalogo.csv
+│   │   ├── features_diagnostico.csv
+│   │   ├── features_plano_pipeline.csv
+│   │   ├── features_resumo_derivadas.csv
+│   │   ├── merge_integridade.csv
+│   │   ├── merge_registro.json
+│   │   ├── selecao_comparacao_inicial.csv
+│   │   ├── selecao_configuracoes.json
+│   │   ├── selecao_experimentos.csv
+│   │   ├── selecao_features.csv
+│   │   ├── selecao_hipoteses.csv
+│   │   ├── selecao_janelas_final.csv
+│   │   ├── selecao_mape_janelas.csv
+│   │   ├── selecao_mape_resumo.csv
+│   │   ├── selecao_optuna_trials.csv
+│   │   ├── selecao_previsoes_cv.csv
+│   │   └── selecao_transformacao_alvo.csv
+│   ├── pdf_preview/
+│   │   ├── pagina_01.png
+│   │   ├── pagina_02.png
+│   │   ├── pagina_03.png
+│   │   ├── pagina_04.png
+│   │   ├── pagina_05.png
+│   │   ├── pagina_06.png
+│   │   ├── pagina_07.png
+│   │   └── pagina_08.png
+│   ├── predictions/
+│   │   ├── .gitkeep
+│   │   ├── avaliacao_teste.csv
+│   │   ├── future_unseen_predictions.csv
+│   │   └── README.md
+│   └── relatorio_executivo.pdf
+├── .gitattributes
+├── .gitignore
+├── PLANO_PROJETO.md
+├── README.md
+└── requirements.txt
+```
+
+</details>
 
 ## Ambiente e reprodução
 
