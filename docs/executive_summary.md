@@ -84,7 +84,7 @@ A importância por permutação mediu quanto o erro aumentou ao embaralhar cada 
 | `grade` | Indicador de padrão/qualidade, com definição da fonte pendente | Relevante para prever; não demonstra efeito causal de uma melhoria no imóvel |
 | `per_bchlr` e `per_prfsnl` | Indicadores demográficos com significado a confirmar | Influentes no modelo; origem, definição e disponibilidade histórica precisam ser verificadas |
 
-Variáveis correlacionadas e derivadas limitam a interpretação do ranking. SHAP foi usado no notebook 06 para explicar três previsões específicas; suas contribuições estão em log(1 + preço), não em dinheiro. A explicação por LLM permanece uma proposta para traduzir fatos verificados em texto.
+Variáveis correlacionadas e derivadas limitam a interpretação do ranking. O notebook 06 apresenta SHAP global nas mesmas 600 vendas e SHAP local para três previsões específicas; suas contribuições estão em log(1 + preço), não em dinheiro. A explicação por LLM permanece uma proposta para traduzir fatos verificados em texto.
 
 ## 8. O que está entregue e o que está proposto
 
@@ -168,3 +168,10 @@ Não há tolerância de negócio aprovada. Melhorar o Ridge não basta para acei
 Na validação do candidato final, a média do MAPE das três janelas é **11,97%**. Agrupando todas as vendas de validação, é **11,92%**: as quantidades de vendas por janela diferem. Para comparar períodos com peso igual, usamos o primeiro valor.
 
 **Leitura por faixa:** o MAPE foi **15,08%** até USD 300 mil; **11,46%** de USD 300 a 600 mil; **12,29%** de USD 600 mil a 1 milhão; e **17,39%** acima de USD 1 milhão. O erro relativo também é maior no grupo mais caro. As faixas são definidas pelo preço real e servem à avaliação retrospectiva, não para classificar automaticamente o risco de uma previsão futura.
+
+
+### SHAP global e local
+
+O notebook 06 agora inclui SHAP global nas mesmas 600 vendas usadas na permutação, além dos três exemplos locais. Latitude, `grade` e área habitável lideram a média de |SHAP|, com 0,1384, 0,1099 e 0,1037 em log(1 + preço). As barras mostram magnitude média; o beeswarm mostra direção e distribuição das contribuições. Não são efeitos causais, percentuais nem valores monetários.
+
+O cálculo usa contribuições nativas do LightGBM e gráficos Matplotlib. O CEP é agrupado pela soma das contribuições one-hot por imóvel. As previsões e métricas não mudaram; nenhum modelo foi retreinado. Detalhes e gráficos em [SHAP global](shap_global.md).

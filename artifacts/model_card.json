@@ -133,7 +133,13 @@
       6380,
       9204
     ],
-    "escala_shap": "log1p_price"
+    "escala_shap": "log1p_price",
+    "shap_global_amostra": 600,
+    "shap_global_metodo": "LightGBM pred_contrib; CEP agrupado por soma",
+    "shap_global_arquivos": [
+      "reports/metrics/avaliacao_shap_global.csv",
+      "reports/metrics/avaliacao_shap_global_importancias.csv"
+    ]
   },
   "limites": [
     "EDA prévia examinou todo o histórico",

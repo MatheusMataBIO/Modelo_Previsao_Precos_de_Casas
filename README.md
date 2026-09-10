@@ -59,7 +59,7 @@ MAE do LightGBM: **41.185,22 no treino final**, **62.249,43 na média da valida�
 
 ## Explicabilidade e limitações
 
-A importância por permutação em 600 vendas, com três repetições, destaca **latitude, área habitável e `grade`**. Localização, tamanho e possível padrão construtivo têm interpretação imobiliária plausível, mas as definições das colunas ainda precisam de confirmação. O notebook 06 também calcula **contribuições SHAP nativas do LightGBM para três exemplos**, na escala log(1 + preço). Somar o valor de referência e as contribuições e aplicar `expm1` reproduz as previsões. São explicações locais; não representam todos os imóveis.
+A importância por permutação em 600 vendas, com três repetições, destaca **latitude, área habitável e `grade`**. Localização, tamanho e possível padrão construtivo têm interpretação imobiliária plausível, mas as definições das colunas ainda precisam de confirmação. O notebook 06 calcula **SHAP global nas mesmas 600 vendas**, com barras e beeswarm, e **SHAP local para três exemplos**, na escala log(1 + preço). Somar o valor de referência e as contribuições e aplicar `expm1` reproduz as previsões. O ranking global destaca latitude, `grade` e área habitável. São descrições da amostra e dos casos explicados, sem garantia para todos os imóveis. Veja a [análise de SHAP global](docs/shap_global.md).
 
 Limitações principais:
 
@@ -81,7 +81,7 @@ Detalhes: [avaliação](docs/evaluation_summary.md), [ficha do modelo](docs/mode
 | 03 | [Feature engineering](notebooks/03_feature_engineering.ipynb) | Candidatas, casos especiais e contrato de colunas |
 | 04 | [Split e baseline](notebooks/04_split_baseline.ipynb) | Manifestos temporais e referências |
 | 05 | [Seleção](notebooks/05_selecao_modelo.ipynb) | Comparação, hipóteses preditivas e Optuna |
-| 06 | [Avaliação e explicabilidade](notebooks/06_avaliacao_explicabilidade.ipynb) | Teste, SHAP, permutação e previsões futuras |
+| 06 | [Avaliação e explicabilidade](notebooks/06_avaliacao_explicabilidade.ipynb) | Teste, SHAP global/local, permutação e previsões futuras |
 | 07 | [Empacotamento e API](notebooks/07_empacotamento_api.ipynb) | Documentação de inferência, contrato HTTP, Docker e LLM |
 | 08 | [Deploy e monitoramento](notebooks/08_deploy_monitoramento.ipynb) | Documentação de arquitetura, MLflow, monitoramento e aprendizado contínuo |
 | 09 | [Comunicação](notebooks/09_comunicacao_stakeholders.ipynb) | Apresentação em Markdown com resultados e gráficos |
@@ -133,7 +133,8 @@ A árvore abaixo lista os arquivos versionados da entrega, incluindo dados proce
 │   ├── model_card.md
 │   ├── model_selection_summary.md
 │   ├── packaging_api.md
-│   └── project_audit.md
+│   ├── project_audit.md
+│   └── shap_global.md
 ├── notebooks/
 │   ├── 01_eda.ipynb
 │   ├── 02_merge_eda_complementar.ipynb
@@ -173,6 +174,8 @@ A árvore abaixo lista os arquivos versionados da entrega, incluindo dados proce
 │   │   ├── avaliacao_erros.png
 │   │   ├── avaliacao_importancias.png
 │   │   ├── avaliacao_segmentos.png
+│   │   ├── avaliacao_shap_global_barras.png
+│   │   ├── avaliacao_shap_global_beeswarm.png
 │   │   ├── avaliacao_shap_local.png
 │   │   ├── baseline_cv_temporal.png
 │   │   ├── baseline_mae_por_janela.png
@@ -207,6 +210,8 @@ A árvore abaixo lista os arquivos versionados da entrega, incluindo dados proce
 │   │   ├── avaliacao_por_waterfront.csv
 │   │   ├── avaliacao_por_zipcode.csv
 │   │   ├── avaliacao_registro.json
+│   │   ├── avaliacao_shap_global.csv
+│   │   ├── avaliacao_shap_global_importancias.csv
 │   │   ├── avaliacao_shap_local.csv
 │   │   ├── baseline_cv_janelas.csv
 │   │   ├── baseline_cv_previsoes.csv
@@ -259,7 +264,9 @@ A árvore abaixo lista os arquivos versionados da entrega, incluindo dados proce
 │   │   ├── pagina_05.png
 │   │   ├── pagina_06.png
 │   │   ├── pagina_07.png
-│   │   └── pagina_08.png
+│   │   ├── pagina_08.png
+│   │   ├── pagina_09.png
+│   │   └── pagina_10.png
 │   ├── predictions/
 │   │   ├── .gitkeep
 │   │   ├── avaliacao_teste.csv

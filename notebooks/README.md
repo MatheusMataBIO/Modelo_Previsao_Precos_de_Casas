@@ -24,9 +24,12 @@ Os notebooks `07_empacotamento_api.ipynb` e `08_deploy_monitoramento.ipynb` são
 
 As seções 9 dos notebooks 07 e 08 documentam também a integração com API externa de LLM para explicações: contrato, dados enviados, verificações de texto, contingência, custo, observabilidade e versionamento. Não há integração executada nem alteração no cálculo do preço.
 
-O notebook `09_comunicacao_stakeholders.ipynb` contém 13 células Markdown para apresentação. Os dois gráficos executivos foram produzidos a partir dos relatórios salvos; não houve novo ajuste de modelo. Consulte também `docs/executive_summary.md`.
+O notebook `09_comunicacao_stakeholders.ipynb` contém células Markdown para apresentação, com os gráficos executivos e a análise de SHAP global. As figuras foram produzidas a partir dos relatórios e do modelo salvos; não houve novo ajuste de modelo. Consulte também `docs/executive_summary.md`.
 
 
 ### Organização das verificações
 
 As validações ficam próximas da leitura e preparação dos dados, da definição das partições e do reaproveitamento dos modelos. Elas interrompem a execução quando continuar poderia comprometer a avaliação. As análises utilizam os dados já conferidos, evitando repetir controles em cada bloco. Os casos simulados ficam em seções próprias dos notebooks 02 e 03. Nos notebooks 05 e 06, as definições de preparação e o reaproveitamento dos resultados estão em células separadas.
+
+
+O notebook 06 inclui SHAP global em 600 vendas (barras e beeswarm), nas mesmas linhas da permutação, e três exemplos locais. Os valores e gráficos são salvos em `reports/metrics/avaliacao_shap_global*.csv` e `reports/figures/avaliacao_shap_global_*.png`. Consulte [a análise global](../docs/shap_global.md).

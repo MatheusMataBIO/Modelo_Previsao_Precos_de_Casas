@@ -119,7 +119,7 @@ O fluxo será EDA geral → merge → EDA pós-merge → preparação das variá
 - Comparar com o baseline congelado no mesmo teste, sem usar essa comparação para iniciar novos ajustes no teste.
 - Produzir gráficos de preço real versus previsto, resíduos e distribuição dos erros.
 - Analisar erros por faixas de preço, região e características relevantes, informando o número de exemplos por grupo.
-- Apresentar importância global por permutação e, se adequado ao modelo e ao custo, explicações SHAP de exemplos individuais.
+- Apresentar permutação e SHAP global nas mesmas 600 vendas, com barras e beeswarm, além de três explicações SHAP locais.
 - Explicar que importância preditiva não demonstra causalidade e que variáveis correlacionadas podem dividir importância.
 - Gerar previsões para `future_unseen_examples.csv`, preservando a ordem e adicionando `predicted_price` e uma referência de linha.
 - Identificar previsões inválidas ou não finitas e registrar comportamentos incompatíveis com o domínio antes de concluir a entrega.
@@ -178,7 +178,7 @@ O fluxo será EDA geral → merge → EDA pós-merge → preparação das variá
 
 **Entregáveis:** resumo executivo, relatório técnico e README reproduzível.
 
-**Execução da etapa 09:** concluída em `notebooks/09_comunicacao_stakeholders.ipynb` e `docs/executive_summary.md`. Inclui dois gráficos, métricas em linguagem de negócio, exemplos reais selecionados por regra explícita e roteiro de apresentação. Não houve novo treinamento; as propostas de API, Docker, LLM e MLflow continuam identificadas como não implementadas.
+**Execução da etapa 09:** concluída em `notebooks/09_comunicacao_stakeholders.ipynb` e `docs/executive_summary.md`. Inclui gráficos executivos e SHAP global, métricas em linguagem de negócio, exemplos reais selecionados por regra explícita e roteiro de apresentação. Não houve novo treinamento; as propostas de API, Docker, LLM e MLflow continuam identificadas como não implementadas.
 
 **Critério de conclusão:** uma pessoa de negócio entende o resultado e seus limites, e uma pessoa técnica consegue reproduzir a entrega.
 
@@ -222,7 +222,8 @@ O desenvolvimento analítico é feito em Python com Jupyter Notebook. Os noteboo
 │   ├── model_card.md
 │   ├── model_selection_summary.md
 │   ├── packaging_api.md
-│   └── project_audit.md
+│   ├── project_audit.md
+│   └── shap_global.md
 ├── notebooks/
 │   ├── 01_eda.ipynb
 │   ├── 02_merge_eda_complementar.ipynb
@@ -262,6 +263,8 @@ O desenvolvimento analítico é feito em Python com Jupyter Notebook. Os noteboo
 │   │   ├── avaliacao_erros.png
 │   │   ├── avaliacao_importancias.png
 │   │   ├── avaliacao_segmentos.png
+│   │   ├── avaliacao_shap_global_barras.png
+│   │   ├── avaliacao_shap_global_beeswarm.png
 │   │   ├── avaliacao_shap_local.png
 │   │   ├── baseline_cv_temporal.png
 │   │   ├── baseline_mae_por_janela.png
@@ -296,6 +299,8 @@ O desenvolvimento analítico é feito em Python com Jupyter Notebook. Os noteboo
 │   │   ├── avaliacao_por_waterfront.csv
 │   │   ├── avaliacao_por_zipcode.csv
 │   │   ├── avaliacao_registro.json
+│   │   ├── avaliacao_shap_global.csv
+│   │   ├── avaliacao_shap_global_importancias.csv
 │   │   ├── avaliacao_shap_local.csv
 │   │   ├── baseline_cv_janelas.csv
 │   │   ├── baseline_cv_previsoes.csv
@@ -348,7 +353,9 @@ O desenvolvimento analítico é feito em Python com Jupyter Notebook. Os noteboo
 │   │   ├── pagina_05.png
 │   │   ├── pagina_06.png
 │   │   ├── pagina_07.png
-│   │   └── pagina_08.png
+│   │   ├── pagina_08.png
+│   │   ├── pagina_09.png
+│   │   └── pagina_10.png
 │   ├── predictions/
 │   │   ├── .gitkeep
 │   │   ├── avaliacao_teste.csv

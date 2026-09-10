@@ -83,3 +83,10 @@ Não há tolerância de negócio aprovada. Melhorar o Ridge não basta para acei
 Na validação do candidato final, a média do MAPE das três janelas é **11,97%**. Agrupando todas as vendas de validação, é **11,92%**: as quantidades de vendas por janela diferem. Para comparar períodos com peso igual, usamos o primeiro valor.
 
 **Leitura por faixa:** o MAPE foi **15,08%** até USD 300 mil; **11,46%** de USD 300 a 600 mil; **12,29%** de USD 600 mil a 1 milhão; e **17,39%** acima de USD 1 milhão. O erro relativo também é maior no grupo mais caro. As faixas são definidas pelo preço real e servem à avaliação retrospectiva, não para classificar automaticamente o risco de uma previsão futura.
+
+
+### SHAP global e local
+
+O notebook 06 agora inclui SHAP global nas mesmas 600 vendas usadas na permutação, além dos três exemplos locais. Latitude, `grade` e área habitável lideram a média de |SHAP|, com 0,1384, 0,1099 e 0,1037 em log(1 + preço). As barras mostram magnitude média; o beeswarm mostra direção e distribuição das contribuições. Não são efeitos causais, percentuais nem valores monetários.
+
+O cálculo usa contribuições nativas do LightGBM e gráficos Matplotlib. O CEP é agrupado pela soma das contribuições one-hot por imóvel. As previsões e métricas não mudaram; nenhum modelo foi retreinado. Detalhes e gráficos em [SHAP global](shap_global.md).

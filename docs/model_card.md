@@ -45,3 +45,10 @@ Não há tolerância de negócio aprovada. Melhorar o Ridge não basta para acei
 **Cuidados e decisão:** o mesmo erro em USD pesa mais em imóveis baratos. Preços próximos de zero podem distorcer o MAPE; no teste, o menor preço é USD 81.000. Mantemos **MAE como critério principal de seleção**. MAPE foi acrescentado às previsões existentes, sem novos treinamentos ou escolha pelo teste; não há tolerância de negócio aprovada.
 
 Na validação do candidato final, a média do MAPE das três janelas é **11,97%**. Agrupando todas as vendas de validação, é **11,92%**: as quantidades de vendas por janela diferem. Para comparar períodos com peso igual, usamos o primeiro valor.
+
+
+### SHAP global e local
+
+O notebook 06 agora inclui SHAP global nas mesmas 600 vendas usadas na permutação, além dos três exemplos locais. Latitude, `grade` e área habitável lideram a média de |SHAP|, com 0,1384, 0,1099 e 0,1037 em log(1 + preço). As barras mostram magnitude média; o beeswarm mostra direção e distribuição das contribuições. Não são efeitos causais, percentuais nem valores monetários.
+
+O cálculo usa contribuições nativas do LightGBM e gráficos Matplotlib. O CEP é agrupado pela soma das contribuições one-hot por imóvel. As previsões e métricas não mudaram; nenhum modelo foi retreinado. Detalhes e gráficos em [SHAP global](shap_global.md).

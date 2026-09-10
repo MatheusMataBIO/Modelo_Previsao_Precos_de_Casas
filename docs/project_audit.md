@@ -193,3 +193,14 @@ Validação: compilação de todas as células; execução completa de 01, 02, 0
 ### Atualização posterior do relatório executivo em PDF
 
 A pedido do autor, `reports/relatorio_executivo.pdf` foi atualizado após a revisão textual, substituindo a versão anterior no mesmo caminho. O documento mantém oito páginas e incorpora os resultados salvos, as limitações, o papel apenas documental de API/Docker/LLM/MLflow e o esquema de deploy simplificado. As prévias em `reports/pdf_preview/` foram atualizadas. A estrutura do PDF e a paginação foram conferidas, com inspeção visual das prévias de resultados e deploy. Não houve treinamento nem alteração das métricas. Esta atualização substitui a ressalva anterior sobre esse PDF não ter sido regenerado.
+
+
+## Ampliação da explicabilidade — SHAP global
+
+O notebook 06 passou a calcular SHAP global nas mesmas 600 linhas da permutação, preservando os três exemplos locais. O cálculo usa `pred_contrib=True` nativo do LightGBM e gráficos Matplotlib; a biblioteca `shap` não foi instalada nem é necessária para executar essa implementação. O beeswarm distribui pontos em faixas por proximidade horizontal; as cores representam os valores observados, limitadas aos percentis 5 e 95 somente para visualização.
+
+As contribuições one-hot de CEP são somadas por linha antes do resumo global. A aditividade foi conferida antes e depois do agrupamento; isso não equivale a recalcular Shapley com CEP como jogador único. O ranking por média de |SHAP| destaca latitude, grade e área habitável. Seus valores em log(1 + preço) não devem ser comparados numericamente ao aumento do MAE em USD da permutação. Definições, correlações e disponibilidade temporal continuam limitando a interpretação.
+
+O notebook completo foi executado em cópia temporária, com chamadas de fit bloqueadas. A soma das contribuições e do valor base, após expm1, reproduz as 600 previsões salvas. As fontes e os artefatos avaliados preservaram seus hashes. Os modelos, previsões e métricas não foram alterados nem foi selecionada uma nova configuração. Foram atualizados os documentos, a ficha JSON, a comunicação e o PDF executivo, agora com dez páginas. Nenhuma apresentação pessoal foi incluída ou modificada.
+
+Esta ampliação substitui a limitação anterior de não haver SHAP global. Ela não elimina as limitações de amostragem, causalidade, dependência entre entradas ou de avaliação em teste já examinado. Resultados e gráficos: [SHAP global](shap_global.md).

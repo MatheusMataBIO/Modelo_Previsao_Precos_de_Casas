@@ -54,3 +54,6 @@ Execute 03, 04 e 05 em ordem com o ambiente de `requirements.txt`. Os parâmetro
 O candidato final teve MAPE médio de **11,97%** nas três janelas. Agrupando as 5.935 vendas de validação, o MAPE foi **11,92%**; a diferença vem do peso de cada janela. MAE permaneceu como critério de seleção. Esses percentuais complementam a interpretação e não representam acurácia.
 
 As métricas do teste, calculadas posteriormente, estão em [evaluation_summary.md](evaluation_summary.md) e não orientaram a escolha do modelo.
+
+
+A avaliação posterior no notebook 06 inclui SHAP global e local; essa análise não orientou a seleção. Ver [SHAP global](shap_global.md).

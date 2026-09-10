@@ -207,7 +207,7 @@ Esses campos seriam adicionais aos identificadores e ao `predicted_price` calcul
 
 Somente um contexto autorizado: previsão, nomes e valores necessários das características, principais contribuições locais disponíveis, avisos de preparação e limitações aprovadas. Preço real não é conhecido em uma nova previsão e não seria inventado. O histórico completo, identificadores pessoais, endereço exato e credenciais não seriam enviados. O envio de localização detalhada também dependeria de necessidade e autorização; preferimos um contexto reduzido.
 
-As três explicações SHAP do notebook 06 pertencem àqueles três imóveis e não podem ser reutilizadas como explicação de outra casa. Para uma nova casa, o serviço precisaria calcular suas contribuições locais ou limitar o texto aos fatos efetivamente disponíveis. O ranking global de permutação não substitui essa explicação individual.
+O SHAP global de 600 vendas resume a amostra e não substitui a explicação individual. As três explicações SHAP do notebook 06 pertencem àqueles três imóveis e não podem ser reutilizadas como explicação de outra casa. Para uma nova casa, o serviço precisaria calcular suas contribuições locais ou limitar o texto aos fatos efetivamente disponíveis. O ranking global de permutação não substitui essa explicação individual.
 
 O contexto identificaria as contribuições como valores em **log(1 + preço)**, sem apresentá-las como dinheiro. Se o significado de um indicador não estiver confirmado, a LLM receberia essa limitação; não seria instruída a completar a definição por intuição.
 
