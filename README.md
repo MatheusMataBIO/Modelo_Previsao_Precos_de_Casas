@@ -1,4 +1,4 @@
-# Previsão de preços de casas — desafio de Dados e IA
+# Previsão de preços de casas 
 
 **Moeda adotada:** dólar americano (USD), por premissa do projeto baseada no contexto de Seattle. Não houve conversão cambial nem alteração dos valores. A fonte não confirmou explicitamente a moeda. Preços e erros monetários estão em USD; percentuais, R² e contribuições SHAP em log mantêm suas próprias escalas.
 
