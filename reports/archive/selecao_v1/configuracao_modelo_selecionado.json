@@ -1,0 +1,128 @@
+{
+  "versao": "selected_candidate_v1",
+  "status": "configuracao_congelada_aguardando_teste_final",
+  "modelo": "HistGradientBoosting",
+  "grupo": "fisicas_demografia_sem_hous_val_amt",
+  "colunas_ordenadas": [
+    "bedrooms",
+    "bathrooms",
+    "sqft_living",
+    "sqft_lot",
+    "floors",
+    "waterfront",
+    "view",
+    "condition",
+    "grade",
+    "sqft_above",
+    "sqft_basement",
+    "yr_built",
+    "yr_renovated",
+    "zipcode",
+    "lat",
+    "long",
+    "sqft_living15",
+    "sqft_lot15",
+    "ppltn_qty",
+    "urbn_ppltn_qty",
+    "sbrbn_ppltn_qty",
+    "farm_ppltn_qty",
+    "non_farm_qty",
+    "medn_hshld_incm_amt",
+    "medn_incm_per_prsn_amt",
+    "edctn_less_than_9_qty",
+    "edctn_9_12_qty",
+    "edctn_high_schl_qty",
+    "edctn_some_clg_qty",
+    "edctn_assoc_dgre_qty",
+    "edctn_bchlr_dgre_qty",
+    "edctn_prfsnl_qty",
+    "per_urbn",
+    "per_sbrbn",
+    "per_farm",
+    "per_non_farm",
+    "per_less_than_9",
+    "per_9_to_12",
+    "per_hsd",
+    "per_some_clg",
+    "per_assoc",
+    "per_bchlr",
+    "per_prfsnl",
+    "has_recorded_basement",
+    "has_renovation_year",
+    "basement_area_ratio",
+    "living_area_per_bedroom",
+    "bathrooms_per_bedroom",
+    "log_living_area",
+    "log_lot_area"
+  ],
+  "parametros": {
+    "max_iter": 220,
+    "learning_rate": 0.06406330210809386,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 45,
+    "l2_regularization": 0.3799934985576666,
+    "max_bins": 127
+  },
+  "transformacao_alvo_log1p": true,
+  "random_state": 42,
+  "threads": 2,
+  "pipeline": {
+    "numeric_imputer": "median",
+    "keep_empty_features": true,
+    "numeric_scaler": null,
+    "categorical_columns": [
+      "zipcode"
+    ],
+    "categorical_imputer": "constant_UNKNOWN",
+    "onehot_drop": "first",
+    "onehot_handle_unknown": "ignore",
+    "sparse": false,
+    "boosting_early_stopping": false
+  },
+  "metricas_cv": {
+    "mae_medio": 62456.57983532915,
+    "mae_desvio": 2767.1830874601806,
+    "rmse_medio": 112160.84732446435,
+    "r2_medio": 0.8988039449897052,
+    "nao_positivas": 0
+  },
+  "regra_selecao": {
+    "metrica": "mean_fold_mae",
+    "margem_simplicidade": 0.01,
+    "desempate": "menos_colunas_depois_menor_mae"
+  },
+  "test_evaluated": false,
+  "usa_demografia": true,
+  "pendencias": [
+    "fonte e significado das colunas originais a confirmar",
+    "disponibilidade temporal dos indicadores usados precisa de confirmação antes do deploy"
+  ],
+  "versoes": {
+    "scikit_learn": "1.9.0",
+    "optuna": "4.9.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5"
+  },
+  "source_sha256": {
+    "data/processed/features_historico.csv": "7222604d59f48f5a55759b3a786a2813d715876830af1e07ab4b0446775001dc",
+    "data/processed/identificacao_alvo_historico.csv": "0aa64f9d24125a9a64a5581378f8f2fcdac74d798d07cfa6a5aa6df5f712dea5",
+    "data/processed/contrato_features.json": "e6eb87be33b373f110436dca46d69af41d490ccb3ad73662be88c7003502ed1b",
+    "data/processed/split_manifest.csv": "f85a6d77daefc468a00cf11d76034fcbc5bf77841050712b2420b1a36c0d8fff",
+    "data/processed/cv_manifest.csv": "c8e9ab197b077f2690a42ee0da22c343f154724e70708f237085f35be9e7287f"
+  },
+  "orcamento": {
+    "fits_novos": 48,
+    "fits_reaproveitados": 3,
+    "tentativas_optuna": 8,
+    "max_tentativas_optuna": 8,
+    "tempo_experimentos_segundos": 114.72394739999436,
+    "tempo_ajustes_segundos": 112.17899020027835,
+    "maior_rss_observado_mib": 284.14453125,
+    "nota_memoria": "amostrada entre etapas, não pico exato"
+  },
+  "limitacoes": [
+    "seleção e ajuste usam a mesma CV; avaliação final separada pendente",
+    "EDA anterior examinou todo o histórico",
+    "busca pequena e sequencial, não exaustiva"
+  ]
+}

@@ -1,0 +1,4 @@
+janela,treino_inicio,treino_fim,validacao_inicio,validacao_fim,dias_validacao,registros_treino,registros_validacao,vendas_antigas_separadas,ceps_desconhecidos_validacao
+1,2014-05-02,2014-10-25,2014-10-26,2014-12-09,45,11241,2392,15,0
+2,2014-05-02,2014-12-09,2014-12-10,2015-01-23,45,13626,1626,22,0
+3,2014-05-02,2015-01-23,2015-01-24,2015-03-09,45,15235,1917,39,0

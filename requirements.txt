@@ -1,0 +1,27 @@
+# Bibliotecas usadas pelo projeto: notebooks.
+# Versões conferidas no ambiente Python 3.13 existente.
+# Dependências indiretas são instaladas automaticamente pelo pip.
+
+# Dados e estatísticas (SciPy também é usado nas correlações de Spearman).
+numpy==2.5.2
+pandas==3.0.5
+scipy==1.18.1
+
+# Gráficos.
+matplotlib==3.11.1
+
+# Modelagem, busca de parâmetros e persistência.
+scikit-learn==1.9.0
+xgboost==3.4.1
+lightgbm==4.7.0
+optuna==4.9.0
+joblib==1.6.0
+
+# Medição e controle de recursos.
+psutil==7.2.2
+threadpoolctl==3.6.0
+
+# Kernel e exibição dos notebooks.
+ipykernel==7.3.0
+ipython==9.17.1
+matplotlib-inline==0.2.2

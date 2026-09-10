@@ -1,0 +1,52 @@
+{
+  "datasets": [
+    {
+      "arquivo": "imoveis",
+      "linhas": 21613,
+      "colunas": 21,
+      "celulas_ausentes": 0,
+      "linhas_duplicadas": 0
+    },
+    {
+      "arquivo": "demografia",
+      "linhas": 70,
+      "colunas": 27,
+      "celulas_ausentes": 0,
+      "linhas_duplicadas": 0
+    },
+    {
+      "arquivo": "futuros",
+      "linhas": 100,
+      "colunas": 18,
+      "celulas_ausentes": 0,
+      "linhas_duplicadas": 0
+    }
+  ],
+  "analysis_scope": "full_historical_dataset",
+  "historical_rows_analyzed": 21613,
+  "split_status": "pending_modeling_stage",
+  "future_feature_matches": 100,
+  "historical_price_median": 450000.0,
+  "historical_price_skew": 4.024069144684714,
+  "historical_iqr_outliers": 1146,
+  "strongest_absolute_spearman": [
+    "grade",
+    "sqft_living",
+    "sqft_living15"
+  ],
+  "quality_flags": {
+    "preco_nao_positivo": 0,
+    "area_habitavel_nao_positiva": 0,
+    "terreno_nao_positivo": 0,
+    "quartos_zero": 13,
+    "banheiros_zero": 10,
+    "quartos_negativos": 0,
+    "banheiros_negativos": 0,
+    "construcao_apos_venda": 12,
+    "reforma_apos_venda": 6,
+    "reforma_antes_construcao": 0,
+    "areas_nao_somam": 0,
+    "latitude_invalida": 0,
+    "longitude_invalida": 0
+  }
+}

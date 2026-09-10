@@ -1,0 +1,638 @@
+[
+  {
+    "chave": "{\"grupo\": \"fisicas_originais\", \"log_alvo\": false, \"modelo\": \"Ridge\", \"parametros\": {\"alpha\": 1.0, \"solver\": \"lsqr\", \"tol\": 1e-06}}",
+    "modelo": "Ridge",
+    "grupo": "fisicas_originais",
+    "parametros": {
+      "alpha": 1.0,
+      "solver": "lsqr",
+      "tol": 1e-06
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 96528.2010362473,
+        "rmse": 153569.57043307475,
+        "r2": 0.8105140700023563,
+        "mae_treino": 94207.51701985837,
+        "previsoes_nao_positivas": 6,
+        "segundos": 0.0800931999692693,
+        "n_treino": 11241,
+        "n_validacao": 2392
+      },
+      {
+        "janela": 2,
+        "mae": 97160.98999558344,
+        "rmse": 151803.35399458447,
+        "r2": 0.8174364400868609,
+        "mae_treino": 94297.87477444964,
+        "previsoes_nao_positivas": 6,
+        "segundos": 0.0917045000242069,
+        "n_treino": 13626,
+        "n_validacao": 1626
+      },
+      {
+        "janela": 3,
+        "mae": 98344.9427998156,
+        "rmse": 154878.99645459035,
+        "r2": 0.804374760278936,
+        "mae_treino": 94244.8904031415,
+        "previsoes_nao_positivas": 8,
+        "segundos": 0.0975543999811634,
+        "n_treino": 15235,
+        "n_validacao": 1917
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_originais\", \"log_alvo\": false, \"modelo\": \"Random Forest\", \"parametros\": {\"max_depth\": 14, \"max_features\": 0.8, \"min_samples_leaf\": 3, \"n_estimators\": 80}}",
+    "modelo": "Random Forest",
+    "grupo": "fisicas_originais",
+    "parametros": {
+      "n_estimators": 80,
+      "max_depth": 14,
+      "min_samples_leaf": 3,
+      "max_features": 0.8
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 68517.24751358821,
+        "rmse": 128037.987009886,
+        "r2": 0.8682822498663326,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.9616625999333337
+      },
+      {
+        "janela": 2,
+        "mae": 69118.8860483347,
+        "rmse": 123342.34497798866,
+        "r2": 0.879475382077209,
+        "previsoes_nao_positivas": 0,
+        "segundos": 2.475616900017485
+      },
+      {
+        "janela": 3,
+        "mae": 71943.51652198055,
+        "rmse": 135275.2762943846,
+        "r2": 0.8507629366672379,
+        "previsoes_nao_positivas": 0,
+        "segundos": 2.8288117999909446
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_originais\", \"log_alvo\": false, \"modelo\": \"Extra Trees\", \"parametros\": {\"max_depth\": 18, \"max_features\": 1.0, \"min_samples_leaf\": 2, \"n_estimators\": 100}}",
+    "modelo": "Extra Trees",
+    "grupo": "fisicas_originais",
+    "parametros": {
+      "n_estimators": 100,
+      "max_depth": 18,
+      "min_samples_leaf": 2,
+      "max_features": 1.0
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 67360.31611803193,
+        "rmse": 119870.11816367508,
+        "r2": 0.884551446574359,
+        "previsoes_nao_positivas": 0,
+        "segundos": 3.211337100015953
+      },
+      {
+        "janela": 2,
+        "mae": 65406.395793911186,
+        "rmse": 108836.18293268164,
+        "r2": 0.9061578465197162,
+        "previsoes_nao_positivas": 0,
+        "segundos": 2.9126525000901893
+      },
+      {
+        "janela": 3,
+        "mae": 69327.50720137949,
+        "rmse": 127272.03002178359,
+        "r2": 0.8678990996103015,
+        "previsoes_nao_positivas": 0,
+        "segundos": 3.5206435000291094
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_originais\", \"log_alvo\": false, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 1.0, \"learning_rate\": 0.08, \"max_bins\": 127, \"max_iter\": 160, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 20}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_originais",
+    "parametros": {
+      "max_iter": 160,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "max_bins": 127
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 63990.88367654154,
+        "rmse": 114715.82062438395,
+        "r2": 0.8942663411171566,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.9518544999882579
+      },
+      {
+        "janela": 2,
+        "mae": 63027.19324617731,
+        "rmse": 102194.99319871541,
+        "r2": 0.917260936739797,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.1103452000534162
+      },
+      {
+        "janela": 3,
+        "mae": 69986.66093815929,
+        "rmse": 130774.64777088743,
+        "r2": 0.8605280242489965,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.140613800031133
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_com_derivadas\", \"log_alvo\": false, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 1.0, \"learning_rate\": 0.08, \"max_bins\": 127, \"max_iter\": 160, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 20}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_com_derivadas",
+    "parametros": {
+      "max_iter": 160,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "max_bins": 127
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 63669.67416208955,
+        "rmse": 116199.08390134152,
+        "r2": 0.8915144145638629,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.0561814999673516
+      },
+      {
+        "janela": 2,
+        "mae": 62721.80970547963,
+        "rmse": 100775.51932252535,
+        "r2": 0.9195434416164071,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.1729786000214517
+      },
+      {
+        "janela": 3,
+        "mae": 69569.4705173739,
+        "rmse": 134239.18742227735,
+        "r2": 0.8530402297206846,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.2817830999847502
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": false, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 1.0, \"learning_rate\": 0.08, \"max_bins\": 127, \"max_iter\": 160, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 20}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "max_iter": 160,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "max_bins": 127
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 61542.897181671375,
+        "rmse": 110238.16784749345,
+        "r2": 0.9023593634568708,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.289437900064513
+      },
+      {
+        "janela": 2,
+        "mae": 61912.95989563359,
+        "rmse": 103094.01436168818,
+        "r2": 0.9157988034277622,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.3392845001071692
+      },
+      {
+        "janela": 3,
+        "mae": 67482.4939993286,
+        "rmse": 128132.48969785021,
+        "r2": 0.8661068481773253,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.5193508999655023
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"todas_candidatas\", \"log_alvo\": false, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 1.0, \"learning_rate\": 0.08, \"max_bins\": 127, \"max_iter\": 160, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 20}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "todas_candidatas",
+    "parametros": {
+      "max_iter": 160,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "max_bins": 127
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 61255.48742371341,
+        "rmse": 109012.591542493,
+        "r2": 0.9045183408298079,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.2839374999748543
+      },
+      {
+        "janela": 2,
+        "mae": 62512.82304119499,
+        "rmse": 102085.61213293647,
+        "r2": 0.9174379560517161,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.3592646999750286
+      },
+      {
+        "janela": 3,
+        "mae": 67657.49583869486,
+        "rmse": 129337.75701458957,
+        "r2": 0.8635760922405916,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.529078399995342
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_com_derivadas\", \"log_alvo\": false, \"modelo\": \"Extra Trees\", \"parametros\": {\"max_depth\": 18, \"max_features\": 1.0, \"min_samples_leaf\": 2, \"n_estimators\": 100}}",
+    "modelo": "Extra Trees",
+    "grupo": "fisicas_com_derivadas",
+    "parametros": {
+      "n_estimators": 100,
+      "max_depth": 18,
+      "min_samples_leaf": 2,
+      "max_features": 1.0
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 67365.75503813244,
+        "rmse": 122332.65999123806,
+        "r2": 0.8797593080339662,
+        "previsoes_nao_positivas": 0,
+        "segundos": 3.192703799926676
+      },
+      {
+        "janela": 2,
+        "mae": 65798.72084620362,
+        "rmse": 109714.634324948,
+        "r2": 0.9046368734244195,
+        "previsoes_nao_positivas": 0,
+        "segundos": 5.2182548000710085
+      },
+      {
+        "janela": 3,
+        "mae": 69747.1171520512,
+        "rmse": 128085.32608430301,
+        "r2": 0.8662053980873085,
+        "previsoes_nao_positivas": 0,
+        "segundos": 5.418508399976417
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": false, \"modelo\": \"Extra Trees\", \"parametros\": {\"max_depth\": 18, \"max_features\": 1.0, \"min_samples_leaf\": 2, \"n_estimators\": 100}}",
+    "modelo": "Extra Trees",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 100,
+      "max_depth": 18,
+      "min_samples_leaf": 2,
+      "max_features": 1.0
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 65658.88410969295,
+        "rmse": 118016.86241329034,
+        "r2": 0.888093643151216,
+        "previsoes_nao_positivas": 0,
+        "segundos": 5.067072799894959
+      },
+      {
+        "janela": 2,
+        "mae": 64531.225512640725,
+        "rmse": 110381.21719963977,
+        "r2": 0.9034745757462538,
+        "previsoes_nao_positivas": 0,
+        "segundos": 6.170812499942258
+      },
+      {
+        "janela": 3,
+        "mae": 68206.84265901518,
+        "rmse": 125720.06150221013,
+        "r2": 0.8711011612536773,
+        "previsoes_nao_positivas": 0,
+        "segundos": 6.59659610001836
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"todas_candidatas\", \"log_alvo\": false, \"modelo\": \"Extra Trees\", \"parametros\": {\"max_depth\": 18, \"max_features\": 1.0, \"min_samples_leaf\": 2, \"n_estimators\": 100}}",
+    "modelo": "Extra Trees",
+    "grupo": "todas_candidatas",
+    "parametros": {
+      "n_estimators": 100,
+      "max_depth": 18,
+      "min_samples_leaf": 2,
+      "max_features": 1.0
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 65349.267670341855,
+        "rmse": 118907.34607271526,
+        "r2": 0.8863985170091854,
+        "previsoes_nao_positivas": 0,
+        "segundos": 5.50601839995943
+      },
+      {
+        "janela": 2,
+        "mae": 64036.41169532674,
+        "rmse": 109495.27808949823,
+        "r2": 0.9050178177722874,
+        "previsoes_nao_positivas": 0,
+        "segundos": 6.650129399960861
+      },
+      {
+        "janela": 3,
+        "mae": 67810.09591886395,
+        "rmse": 123862.89762372377,
+        "r2": 0.8748812760843511,
+        "previsoes_nao_positivas": 0,
+        "segundos": 5.711604700074531
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 1.0, \"learning_rate\": 0.08, \"max_bins\": 127, \"max_iter\": 160, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 20}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "max_iter": 160,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "max_bins": 127
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 61092.58959495178,
+        "rmse": 112141.05255964436,
+        "r2": 0.8989594073602277,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.195938999997452
+      },
+      {
+        "janela": 2,
+        "mae": 62350.45107949713,
+        "rmse": 109652.75947553827,
+        "r2": 0.9047444053919121,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.4247117000631988
+      },
+      {
+        "janela": 3,
+        "mae": 66683.26121187292,
+        "rmse": 120723.26356700905,
+        "r2": 0.8811438194667912,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.5785264000296593
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 0.029375384576328288, \"learning_rate\": 0.11207488496994687, \"max_bins\": 127, \"max_iter\": 140, \"max_leaf_nodes\": 15, \"min_samples_leaf\": 15}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "max_iter": 140,
+      "learning_rate": 0.11207488496994687,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 15,
+      "l2_regularization": 0.029375384576328288,
+      "max_bins": 127
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 62662.222554170046,
+        "rmse": 115759.09943099009,
+        "r2": 0.8923344142296437,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.8410561999771744
+      },
+      {
+        "janela": 2,
+        "mae": 63858.79638094394,
+        "rmse": 115399.95966222331,
+        "r2": 0.8944975183010588,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.9915423999773338
+      },
+      {
+        "janela": 3,
+        "mae": 67593.26921718699,
+        "rmse": 123492.69262332404,
+        "r2": 0.8756280752870242,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.0400668000802398
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 8.123245085588687, \"learning_rate\": 0.0996807409488512, \"max_bins\": 127, \"max_iter\": 100, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 15}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "max_iter": 100,
+      "learning_rate": 0.0996807409488512,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 15,
+      "l2_regularization": 8.123245085588687,
+      "max_bins": 127
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 60860.67537093245,
+        "rmse": 112022.36379194737,
+        "r2": 0.8991731745196327,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.9790168999461457
+      },
+      {
+        "janela": 2,
+        "mae": 62702.41809795526,
+        "rmse": 109704.99810546715,
+        "r2": 0.9046536241462996,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.1070791999809444
+      },
+      {
+        "janela": 3,
+        "mae": 66991.73827713942,
+        "rmse": 118904.26427606946,
+        "r2": 0.8846985695435831,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.1967031999956816
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 0.3752055855124282, \"learning_rate\": 0.040268192665666, \"max_bins\": 127, \"max_iter\": 220, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 25}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "max_iter": 220,
+      "learning_rate": 0.040268192665666,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 25,
+      "l2_regularization": 0.3752055855124282,
+      "max_bins": 127
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 61045.44815825622,
+        "rmse": 111334.68615954426,
+        "r2": 0.9004072769062385,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.8539962000213563
+      },
+      {
+        "janela": 2,
+        "mae": 62495.46411404943,
+        "rmse": 111677.0055085932,
+        "r2": 0.9011950091820634,
+        "previsoes_nao_positivas": 0,
+        "segundos": 2.122080700006336
+      },
+      {
+        "janela": 3,
+        "mae": 66838.67913605254,
+        "rmse": 119807.0292112019,
+        "r2": 0.8829411013122688,
+        "previsoes_nao_positivas": 0,
+        "segundos": 2.24686020007357
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 0.3799934985576666, \"learning_rate\": 0.06406330210809386, \"max_bins\": 127, \"max_iter\": 220, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 45}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "max_iter": 220,
+      "learning_rate": 0.06406330210809386,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 45,
+      "l2_regularization": 0.3799934985576666,
+      "max_bins": 127
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 59631.468111459406,
+        "rmse": 108841.09540114831,
+        "r2": 0.9048185236931499,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.5995407999726012
+      },
+      {
+        "janela": 2,
+        "mae": 62576.32478678022,
+        "rmse": 112289.97426095532,
+        "r2": 0.9001073979329757,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.8565539000555873
+      },
+      {
+        "janela": 3,
+        "mae": 65161.94660774782,
+        "rmse": 115351.47231128946,
+        "r2": 0.89148591334299,
+        "previsoes_nao_positivas": 0,
+        "segundos": 2.103242599987425
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"HistGradientBoosting\", \"parametros\": {\"l2_regularization\": 0.01597573335543241, \"learning_rate\": 0.07044203478904226, \"max_bins\": 127, \"max_iter\": 180, \"max_leaf_nodes\": 31, \"min_samples_leaf\": 45}}",
+    "modelo": "HistGradientBoosting",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "max_iter": 180,
+      "learning_rate": 0.07044203478904226,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 45,
+      "l2_regularization": 0.01597573335543241,
+      "max_bins": 127
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 59917.81622422723,
+        "rmse": 110387.2260622439,
+        "r2": 0.9020951359407081,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.473867299966514
+      },
+      {
+        "janela": 2,
+        "mae": 62576.73716642299,
+        "rmse": 111798.15956827202,
+        "r2": 0.9009805134775306,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.620310900034383
+      },
+      {
+        "janela": 3,
+        "mae": 65716.11211562406,
+        "rmse": 117387.86988950754,
+        "r2": 0.8876207112182839,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.737507399986498
+      }
+    ]
+  }
+]

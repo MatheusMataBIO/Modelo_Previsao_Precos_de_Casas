@@ -1,0 +1,7 @@
+hipotese,modelo,reducao_mae_pct,janelas_melhores,leitura,limite
+Derivadas acrescentam ganho,HistGradientBoosting,0.5298265855271711,3,ganho consistente observado,"efeito do grupo, não de cada feature individual"
+Demografia sem valor habitacional acrescenta ganho,HistGradientBoosting,2.563063302112323,3,ganho consistente observado,comparação offline; fonte e período dos indicadores pendentes
+hous_val_amt acrescenta ganho incremental,HistGradientBoosting,-0.2552945619468838,1,ganho médio não observado,comparação offline; fonte e período dos indicadores pendentes
+Derivadas acrescentam ganho,Extra Trees,-0.40445190696241085,0,ganho médio não observado,"efeito do grupo, não de cada feature individual"
+Demografia sem valor habitacional acrescenta ganho,Extra Trees,2.224929925136787,3,ganho consistente observado,comparação offline; fonte e período dos indicadores pendentes
+hous_val_amt acrescenta ganho incremental,Extra Trees,0.6054412545173249,3,ganho consistente observado,comparação offline; fonte e período dos indicadores pendentes

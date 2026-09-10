@@ -1,0 +1,35 @@
+{
+  "versao": "avaliacao_v1",
+  "test_evaluated": true,
+  "assinatura": {
+    "configuracao": "d6eeb3d331ed80dd08a698d94cfc30fda093ecfc4513c4ab779bf14325573077",
+    "protocolo_baseline": "b3858684296d96cfc1b723f7501ffce1b337da4eb4459551277d83518ad00ba7",
+    "fontes": {
+      "data/processed/features_historico.csv": "7222604d59f48f5a55759b3a786a2813d715876830af1e07ab4b0446775001dc",
+      "data/processed/identificacao_alvo_historico.csv": "0aa64f9d24125a9a64a5581378f8f2fcdac74d798d07cfa6a5aa6df5f712dea5",
+      "data/processed/contrato_features.json": "e6eb87be33b373f110436dca46d69af41d490ccb3ad73662be88c7003502ed1b",
+      "data/processed/split_manifest.csv": "f85a6d77daefc468a00cf11d76034fcbc5bf77841050712b2420b1a36c0d8fff",
+      "data/processed/cv_manifest.csv": "c8e9ab197b077f2690a42ee0da22c343f154724e70708f237085f35be9e7287f"
+    }
+  },
+  "data_utc": "2026-09-07T18:57:49.373436+00:00",
+  "treino": 17191,
+  "teste": 4331,
+  "ajustes": 2,
+  "segundos_ajuste_previsao_exportacao": 0.8483102999161929,
+  "artefatos_sha256": {
+    "artifacts/modelo_avaliado.joblib": "651941a5294ac60e15ce6782fb90f671cc8c29a1cdbb5b6b0db7b9165a91d5da",
+    "artifacts/ridge_avaliado.joblib": "52efc1d2dc4ac681c13d223c3e18d92e8dad55b9c484c2a7216f4ef76b758243",
+    "reports/predictions/avaliacao_teste.csv": "25fad1f963e3691c1e95098f707467dd22710958a1d7a5eca113921eb937be5a"
+  },
+  "assinatura_semantica": "945f30811953d14a900c50e18dccb68cf737c372d6613b893eb84c4650219797",
+  "migracao_assinatura": {
+    "motivo": "Separar medições de execução das decisões do experimento",
+    "verificacoes": [
+      "Hashes das fontes e artefatos originais preservados",
+      "Pipelines clonados dos dois modelos iguais aos construídos com a configuração atual",
+      "Previsões dos dois modelos reproduzem o teste salvo sem novo fit"
+    ],
+    "observacao": "Assinatura original preservada para rastreabilidade; configuração atual adotada como referência após conferência dos artefatos."
+  }
+}

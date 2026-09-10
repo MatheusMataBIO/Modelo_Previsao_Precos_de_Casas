@@ -1,0 +1,7 @@
+hipotese,modelo,reducao_mae_pct,janelas_melhores,leitura,limite
+Derivadas acrescentam ganho,LightGBM,-0.5691913505036617,0,ganho médio não observado,"efeito do grupo, não de cada feature individual"
+Demografia sem valor habitacional acrescenta ganho,LightGBM,2.1220477107064983,3,ganho consistente observado,avaliação com dados históricos; fonte e período dos indicadores pendentes
+hous_val_amt acrescenta ganho incremental,LightGBM,-0.11518584199554649,1,ganho médio não observado,avaliação com dados históricos; fonte e período dos indicadores pendentes
+Derivadas acrescentam ganho,XGBoost,-0.07420073706287944,2,ganho médio não observado,"efeito do grupo, não de cada feature individual"
+Demografia sem valor habitacional acrescenta ganho,XGBoost,3.066331433610636,3,ganho consistente observado,avaliação com dados históricos; fonte e período dos indicadores pendentes
+hous_val_amt acrescenta ganho incremental,XGBoost,1.2437767499676622,3,ganho consistente observado,avaliação com dados históricos; fonte e período dos indicadores pendentes

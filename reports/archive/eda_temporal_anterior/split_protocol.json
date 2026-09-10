@@ -1,0 +1,11 @@
+{
+  "strategy": "temporal_80_20_with_test_ids_purged_from_development",
+  "cutoff": "2015-03-10",
+  "counts": {
+    "development": 17191,
+    "test": 4331,
+    "purged": 91
+  },
+  "source_sha256": "d0875baa0251b21d4bdc9d2ae940a4fe0bb6009824f23dd0e2a5b2bf04557b7e",
+  "source_row_definition": "zero-based data row, excluding CSV header"
+}

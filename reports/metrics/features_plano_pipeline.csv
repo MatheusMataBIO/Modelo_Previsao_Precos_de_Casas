@@ -1,0 +1,8 @@
+etapa,situacao,regra
+Criação das sete candidatas,implementada,Usa apenas valores da própria linha
+Seleção do conjunto de colunas,definir/comparar na modelagem,Salvar nomes e ordem do conjunto escolhido
+Preenchimento de números ausentes,ajustar em cada treino,Aprender medianas sem consultar validação ou teste
+Codificação do CEP,ajustar em cada treino,Tratar categorias desconhecidas sem erro
+Normalização para regressão linear/Ridge,ajustar em cada treino,Aprender média e escala somente do treino
+Limites para tratamento de outliers,candidatos a avaliar,Aprender limites no treino; manter referência sem corte
+Transformação do preço em log,candidata a avaliar,Reverter previsões e medir erros na escala original

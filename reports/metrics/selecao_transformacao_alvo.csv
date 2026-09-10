@@ -1,0 +1,3 @@
+modelo,grupo,log_alvo,n_colunas,mae_medio,mae_desvio,rmse_medio,r2_medio,nao_positivas,segundos,origem
+LightGBM,fisicas_demografia_sem_hous_val_amt,False,50,65372.32696841811,2542.3530264697915,118439.67160498917,0.8861593546428024,0,1.1640244999980496,execucao_atual
+LightGBM,fisicas_demografia_sem_hous_val_amt,True,50,63121.53246207223,3077.2358078511747,113537.13670974382,0.896018188541689,0,1.3947058000012476,execucao_atual

@@ -1,0 +1,14 @@
+,registros_sinalizados
+preco_nao_positivo,0
+area_habitavel_nao_positiva,0
+terreno_nao_positivo,0
+quartos_zero,11
+banheiros_zero,8
+quartos_negativos,0
+banheiros_negativos,0
+construcao_apos_venda,12
+reforma_apos_venda,6
+reforma_antes_construcao,0
+areas_nao_somam,0
+latitude_invalida,0
+longitude_invalida,0

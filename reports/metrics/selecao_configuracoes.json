@@ -1,0 +1,797 @@
+[
+  {
+    "chave": "{\"grupo\": \"fisicas_originais\", \"log_alvo\": false, \"modelo\": \"Ridge\", \"parametros\": {\"alpha\": 1.0, \"solver\": \"lsqr\", \"tol\": 1e-06}}",
+    "modelo": "Ridge",
+    "grupo": "fisicas_originais",
+    "parametros": {
+      "alpha": 1.0,
+      "solver": "lsqr",
+      "tol": 1e-06
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 96528.2010362473,
+        "rmse": 153569.57043307475,
+        "r2": 0.8105140700023563,
+        "mae_treino": 94207.51701985837,
+        "previsoes_nao_positivas": 6,
+        "segundos": 0.0879811000013433,
+        "n_treino": 11241,
+        "n_validacao": 2392
+      },
+      {
+        "janela": 2,
+        "mae": 97160.98999558344,
+        "rmse": 151803.35399458447,
+        "r2": 0.8174364400868609,
+        "mae_treino": 94297.87477444964,
+        "previsoes_nao_positivas": 6,
+        "segundos": 0.0896855000028153,
+        "n_treino": 13626,
+        "n_validacao": 1626
+      },
+      {
+        "janela": 3,
+        "mae": 98344.9427998156,
+        "rmse": 154878.99645459035,
+        "r2": 0.804374760278936,
+        "mae_treino": 94244.8904031415,
+        "previsoes_nao_positivas": 8,
+        "segundos": 0.0965547999985574,
+        "n_treino": 15235,
+        "n_validacao": 1917
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_originais\", \"log_alvo\": false, \"modelo\": \"Random Forest\", \"parametros\": {\"max_depth\": 14, \"max_features\": 0.8, \"min_samples_leaf\": 3, \"n_estimators\": 80}}",
+    "modelo": "Random Forest",
+    "grupo": "fisicas_originais",
+    "parametros": {
+      "n_estimators": 80,
+      "max_depth": 14,
+      "min_samples_leaf": 3,
+      "max_features": 0.8
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 68517.24751358821,
+        "rmse": 128037.987009886,
+        "r2": 0.8682822498663326,
+        "previsoes_nao_positivas": 0,
+        "segundos": 1.8239880000000994
+      },
+      {
+        "janela": 2,
+        "mae": 69118.8860483347,
+        "rmse": 123342.34497798866,
+        "r2": 0.879475382077209,
+        "previsoes_nao_positivas": 0,
+        "segundos": 2.1459639000022435
+      },
+      {
+        "janela": 3,
+        "mae": 71943.51652198055,
+        "rmse": 135275.2762943846,
+        "r2": 0.8507629366672379,
+        "previsoes_nao_positivas": 0,
+        "segundos": 2.374473100000614
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_originais\", \"log_alvo\": false, \"modelo\": \"XGBoost\", \"parametros\": {\"colsample_bytree\": 1.0, \"device\": \"cpu\", \"learning_rate\": 0.08, \"max_depth\": 5, \"min_child_weight\": 5, \"n_estimators\": 160, \"objective\": \"reg:squarederror\", \"reg_lambda\": 1.0, \"subsample\": 1.0, \"tree_method\": \"hist\"}}",
+    "modelo": "XGBoost",
+    "grupo": "fisicas_originais",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 5,
+      "learning_rate": 0.08,
+      "min_child_weight": 5,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_lambda": 1.0,
+      "objective": "reg:squarederror",
+      "tree_method": "hist",
+      "device": "cpu"
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 66424.75440922868,
+        "rmse": 113653.31507099394,
+        "r2": 0.8962158950116881,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.3835765000003448
+      },
+      {
+        "janela": 2,
+        "mae": 66544.9558829182,
+        "rmse": 109292.26804815735,
+        "r2": 0.9053696952566931,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.4438847999990685
+      },
+      {
+        "janela": 3,
+        "mae": 70371.08547698226,
+        "rmse": 125356.12493986095,
+        "r2": 0.8718463581669711,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.4379644000000553
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_originais\", \"log_alvo\": false, \"modelo\": \"LightGBM\", \"parametros\": {\"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.08, \"max_depth\": 8, \"min_child_samples\": 20, \"n_estimators\": 160, \"num_leaves\": 31, \"objective\": \"regression\", \"reg_lambda\": 1.0, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_originais",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 8,
+      "num_leaves": 31,
+      "learning_rate": 0.08,
+      "min_child_samples": 20,
+      "reg_lambda": 1.0,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 65312.04296155244,
+        "rmse": 117115.74083592548,
+        "r2": 0.8897960480871904,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.22157289999813656
+      },
+      {
+        "janela": 2,
+        "mae": 63739.049754852764,
+        "rmse": 101329.0081780373,
+        "r2": 0.9186572323539373,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.23863450000135344
+      },
+      {
+        "janela": 3,
+        "mae": 70183.78425622996,
+        "rmse": 133321.32320379475,
+        "r2": 0.8550430422111341,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.27920889999950305
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_com_derivadas\", \"log_alvo\": false, \"modelo\": \"LightGBM\", \"parametros\": {\"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.08, \"max_depth\": 8, \"min_child_samples\": 20, \"n_estimators\": 160, \"num_leaves\": 31, \"objective\": \"regression\", \"reg_lambda\": 1.0, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_com_derivadas",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 8,
+      "num_leaves": 31,
+      "learning_rate": 0.08,
+      "min_child_samples": 20,
+      "reg_lambda": 1.0,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 66148.08628091314,
+        "rmse": 119849.04448758223,
+        "r2": 0.8845920356986251,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.25533999999970547
+      },
+      {
+        "janela": 2,
+        "mae": 63932.17498532172,
+        "rmse": 104327.2183190082,
+        "r2": 0.913772336678732,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.2753527999993821
+      },
+      {
+        "janela": 3,
+        "mae": 70288.64339331516,
+        "rmse": 136245.11081272093,
+        "r2": 0.8486154033177711,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.29495930000121007
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": false, \"modelo\": \"LightGBM\", \"parametros\": {\"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.08, \"max_depth\": 8, \"min_child_samples\": 20, \"n_estimators\": 160, \"num_leaves\": 31, \"objective\": \"regression\", \"reg_lambda\": 1.0, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 8,
+      "num_leaves": 31,
+      "learning_rate": 0.08,
+      "min_child_samples": 20,
+      "reg_lambda": 1.0,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 64236.015617248355,
+        "rmse": 118293.25548776853,
+        "r2": 0.8875688645684031,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.35230569999839645
+      },
+      {
+        "janela": 2,
+        "mae": 63596.307672695984,
+        "rmse": 105852.79194774243,
+        "r2": 0.9112320897015704,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.38000060000194935
+      },
+      {
+        "janela": 3,
+        "mae": 68284.65761530999,
+        "rmse": 131172.9673794566,
+        "r2": 0.8596771096584336,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.421946399997978
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"todas_candidatas\", \"log_alvo\": false, \"modelo\": \"LightGBM\", \"parametros\": {\"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.08, \"max_depth\": 8, \"min_child_samples\": 20, \"n_estimators\": 160, \"num_leaves\": 31, \"objective\": \"regression\", \"reg_lambda\": 1.0, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "todas_candidatas",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 8,
+      "num_leaves": 31,
+      "learning_rate": 0.08,
+      "min_child_samples": 20,
+      "reg_lambda": 1.0,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 63635.889456350145,
+        "rmse": 115860.58238778655,
+        "r2": 0.8921455563099017,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.3429952000005869
+      },
+      {
+        "janela": 2,
+        "mae": 63740.78027198993,
+        "rmse": 107428.49086729194,
+        "r2": 0.9085696649449798,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.3995446000008087
+      },
+      {
+        "janela": 3,
+        "mae": 68966.21017266621,
+        "rmse": 134671.36870128335,
+        "r2": 0.8520924364160061,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.417043499997817
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_com_derivadas\", \"log_alvo\": false, \"modelo\": \"XGBoost\", \"parametros\": {\"colsample_bytree\": 1.0, \"device\": \"cpu\", \"learning_rate\": 0.08, \"max_depth\": 5, \"min_child_weight\": 5, \"n_estimators\": 160, \"objective\": \"reg:squarederror\", \"reg_lambda\": 1.0, \"subsample\": 1.0, \"tree_method\": \"hist\"}}",
+    "modelo": "XGBoost",
+    "grupo": "fisicas_com_derivadas",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 5,
+      "learning_rate": 0.08,
+      "min_child_weight": 5,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_lambda": 1.0,
+      "objective": "reg:squarederror",
+      "tree_method": "hist",
+      "device": "cpu"
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 66735.41838027802,
+        "rmse": 115831.67985024734,
+        "r2": 0.8921993602564579,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.4438802000004216
+      },
+      {
+        "janela": 2,
+        "mae": 66452.06249039053,
+        "rmse": 109370.97774933046,
+        "r2": 0.9052333451709242,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.4794173000009323
+      },
+      {
+        "janela": 3,
+        "mae": 70304.19526767085,
+        "rmse": 124963.38995580128,
+        "r2": 0.8726480992396379,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.4985325000016019
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": false, \"modelo\": \"XGBoost\", \"parametros\": {\"colsample_bytree\": 1.0, \"device\": \"cpu\", \"learning_rate\": 0.08, \"max_depth\": 5, \"min_child_weight\": 5, \"n_estimators\": 160, \"objective\": \"reg:squarederror\", \"reg_lambda\": 1.0, \"subsample\": 1.0, \"tree_method\": \"hist\"}}",
+    "modelo": "XGBoost",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 5,
+      "learning_rate": 0.08,
+      "min_child_weight": 5,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_lambda": 1.0,
+      "objective": "reg:squarederror",
+      "tree_method": "hist",
+      "device": "cpu"
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 63726.483992866844,
+        "rmse": 111838.50462490629,
+        "r2": 0.8995038714023555,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.5313099000013608
+      },
+      {
+        "janela": 2,
+        "mae": 64918.421990313655,
+        "rmse": 109447.19392567585,
+        "r2": 0.9051012211130516,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.5795936999966216
+      },
+      {
+        "janela": 3,
+        "mae": 68607.04092494784,
+        "rmse": 122378.16770842894,
+        "r2": 0.8778628650717812,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.6800939999993716
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"todas_candidatas\", \"log_alvo\": false, \"modelo\": \"XGBoost\", \"parametros\": {\"colsample_bytree\": 1.0, \"device\": \"cpu\", \"learning_rate\": 0.08, \"max_depth\": 5, \"min_child_weight\": 5, \"n_estimators\": 160, \"objective\": \"reg:squarederror\", \"reg_lambda\": 1.0, \"subsample\": 1.0, \"tree_method\": \"hist\"}}",
+    "modelo": "XGBoost",
+    "grupo": "todas_candidatas",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 5,
+      "learning_rate": 0.08,
+      "min_child_weight": 5,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_lambda": 1.0,
+      "objective": "reg:squarederror",
+      "tree_method": "hist",
+      "device": "cpu"
+    },
+    "log_alvo": false,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 62872.86590719064,
+        "rmse": 109649.21508311827,
+        "r2": 0.9033998762006715,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.5280165999974997
+      },
+      {
+        "janela": 2,
+        "mae": 64662.53792858241,
+        "rmse": 108073.57775051917,
+        "r2": 0.9074683259509099,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.6194739999991725
+      },
+      {
+        "janela": 3,
+        "mae": 67263.16921785341,
+        "rmse": 121432.79078812998,
+        "r2": 0.8797426062381422,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.8048932000019704
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"LightGBM\", \"parametros\": {\"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.08, \"max_depth\": 8, \"min_child_samples\": 20, \"n_estimators\": 160, \"num_leaves\": 31, \"objective\": \"regression\", \"reg_lambda\": 1.0, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 160,
+      "max_depth": 8,
+      "num_leaves": 31,
+      "learning_rate": 0.08,
+      "min_child_samples": 20,
+      "reg_lambda": 1.0,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 60955.10036893593,
+        "rmse": 110258.96810811124,
+        "r2": 0.90232251338341,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.42578449999928125
+      },
+      {
+        "janela": 2,
+        "mae": 61765.627928084075,
+        "rmse": 108824.45359482912,
+        "r2": 0.9061780722751855,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.471812100000534
+      },
+      {
+        "janela": 3,
+        "mae": 66643.86908919667,
+        "rmse": 121527.9884262911,
+        "r2": 0.8795539799664716,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.48784100000193575
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"LightGBM\", \"parametros\": {\"colsample_bytree\": 0.7174250836504598, \"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.037243787155275335, \"max_depth\": 8, \"min_child_samples\": 15, \"n_estimators\": 140, \"num_leaves\": 15, \"objective\": \"regression\", \"reg_lambda\": 5.3994844097874335, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 140,
+      "max_depth": 8,
+      "num_leaves": 15,
+      "learning_rate": 0.037243787155275335,
+      "min_child_samples": 15,
+      "reg_lambda": 5.3994844097874335,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "colsample_bytree": 0.7174250836504598
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 67985.6929186591,
+        "rmse": 125013.29345312272,
+        "r2": 0.8744319869510051,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.30834410000170465
+      },
+      {
+        "janela": 2,
+        "mae": 67839.74604340018,
+        "rmse": 123110.72386105338,
+        "r2": 0.8799276166321376,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.3430601000000024
+      },
+      {
+        "janela": 3,
+        "mae": 71747.01037689767,
+        "rmse": 128651.09421560846,
+        "r2": 0.8650208142643594,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.35259080000105314
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"LightGBM\", \"parametros\": {\"colsample_bytree\": 0.7545474901621302, \"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.0951265319412623, \"max_depth\": 8, \"min_child_samples\": 15, \"n_estimators\": 180, \"num_leaves\": 63, \"objective\": \"regression\", \"reg_lambda\": 0.2327067708383781, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 180,
+      "max_depth": 8,
+      "num_leaves": 63,
+      "learning_rate": 0.0951265319412623,
+      "min_child_samples": 15,
+      "reg_lambda": 0.2327067708383781,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "colsample_bytree": 0.7545474901621302
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 60093.61115044314,
+        "rmse": 110907.11569990045,
+        "r2": 0.901170761135993,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.48434830000041984
+      },
+      {
+        "janela": 2,
+        "mae": 60407.63312589011,
+        "rmse": 103885.21082425937,
+        "r2": 0.9145014375980254,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.49716300000000047
+      },
+      {
+        "janela": 3,
+        "mae": 66247.04937451622,
+        "rmse": 119081.05633383761,
+        "r2": 0.8843554442323134,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.5422925999992003
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"LightGBM\", \"parametros\": {\"colsample_bytree\": 0.7876433945605654, \"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.07006375403316686, \"max_depth\": 8, \"min_child_samples\": 15, \"n_estimators\": 140, \"num_leaves\": 15, \"objective\": \"regression\", \"reg_lambda\": 0.5404103854647329, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 140,
+      "max_depth": 8,
+      "num_leaves": 15,
+      "learning_rate": 0.07006375403316686,
+      "min_child_samples": 15,
+      "reg_lambda": 0.5404103854647329,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "colsample_bytree": 0.7876433945605654
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 62623.13896428029,
+        "rmse": 112046.34293551421,
+        "r2": 0.8991300045737645,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.29513549999683164
+      },
+      {
+        "janela": 2,
+        "mae": 63700.11950963866,
+        "rmse": 111307.87029537762,
+        "r2": 0.901847106246611,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.3172603999992134
+      },
+      {
+        "janela": 3,
+        "mae": 69465.08282987404,
+        "rmse": 125532.24010099201,
+        "r2": 0.8714860143280393,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.33583870000074967
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"LightGBM\", \"parametros\": {\"colsample_bytree\": 0.9885158631391004, \"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.11503785075894513, \"max_depth\": 8, \"min_child_samples\": 45, \"n_estimators\": 220, \"num_leaves\": 63, \"objective\": \"regression\", \"reg_lambda\": 2.4015639024822475, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 220,
+      "max_depth": 8,
+      "num_leaves": 63,
+      "learning_rate": 0.11503785075894513,
+      "min_child_samples": 45,
+      "reg_lambda": 2.4015639024822475,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "colsample_bytree": 0.9885158631391004
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 60471.50578839013,
+        "rmse": 110537.37831526148,
+        "r2": 0.9018286081080341,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.49393480000071577
+      },
+      {
+        "janela": 2,
+        "mae": 62695.35720660111,
+        "rmse": 108048.0640642271,
+        "r2": 0.9075120099944063,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.5451925000015763
+      },
+      {
+        "janela": 3,
+        "mae": 65404.994671434506,
+        "rmse": 118402.61135960359,
+        "r2": 0.8856694225909143,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.5953728999993473
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"LightGBM\", \"parametros\": {\"colsample_bytree\": 0.8661921637123295, \"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.03349945890580597, \"max_depth\": 8, \"min_child_samples\": 35, \"n_estimators\": 220, \"num_leaves\": 63, \"objective\": \"regression\", \"reg_lambda\": 0.10622417200091995, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 220,
+      "max_depth": 8,
+      "num_leaves": 63,
+      "learning_rate": 0.03349945890580597,
+      "min_child_samples": 35,
+      "reg_lambda": 0.10622417200091995,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "colsample_bytree": 0.8661921637123295
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 61231.76299893101,
+        "rmse": 112908.86110725877,
+        "r2": 0.8975710590950451,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.6292899999971269
+      },
+      {
+        "janela": 2,
+        "mae": 62933.201429175904,
+        "rmse": 110979.4275816476,
+        "r2": 0.9024255027247601,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.6846421000009286
+      },
+      {
+        "janela": 3,
+        "mae": 67245.35299293388,
+        "rmse": 122963.91169089456,
+        "r2": 0.8766908863881199,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.8798797999988892
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"LightGBM\", \"parametros\": {\"colsample_bytree\": 0.9950738007798619, \"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.1185132901541098, \"max_depth\": 8, \"min_child_samples\": 35, \"n_estimators\": 100, \"num_leaves\": 31, \"objective\": \"regression\", \"reg_lambda\": 1.0337273919058114, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "num_leaves": 31,
+      "learning_rate": 0.1185132901541098,
+      "min_child_samples": 35,
+      "reg_lambda": 1.0337273919058114,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "colsample_bytree": 0.9950738007798619
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 60689.40204974842,
+        "rmse": 108651.932341328,
+        "r2": 0.905149082169629,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.3987188999999489
+      },
+      {
+        "janela": 2,
+        "mae": 62247.40686510472,
+        "rmse": 109533.04114985431,
+        "r2": 0.9049522909941639,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.4584523999983503
+      },
+      {
+        "janela": 3,
+        "mae": 67208.25962026762,
+        "rmse": 122779.42969387698,
+        "r2": 0.8770606086365648,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.46802170000228216
+      }
+    ]
+  },
+  {
+    "chave": "{\"grupo\": \"fisicas_demografia_sem_hous_val_amt\", \"log_alvo\": true, \"modelo\": \"LightGBM\", \"parametros\": {\"colsample_bytree\": 0.7155595883143029, \"deterministic\": true, \"force_col_wise\": true, \"learning_rate\": 0.05942832282369942, \"max_depth\": 8, \"min_child_samples\": 25, \"n_estimators\": 180, \"num_leaves\": 63, \"objective\": \"regression\", \"reg_lambda\": 5.541681730529235, \"verbosity\": -1}}",
+    "modelo": "LightGBM",
+    "grupo": "fisicas_demografia_sem_hous_val_amt",
+    "parametros": {
+      "n_estimators": 180,
+      "max_depth": 8,
+      "num_leaves": 63,
+      "learning_rate": 0.05942832282369942,
+      "min_child_samples": 25,
+      "reg_lambda": 5.541681730529235,
+      "objective": "regression",
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true,
+      "colsample_bytree": 0.7155595883143029
+    },
+    "log_alvo": true,
+    "metricas_janelas": [
+      {
+        "janela": 1,
+        "mae": 59775.24212720802,
+        "rmse": 111764.9891858892,
+        "r2": 0.8996359473601765,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.6051508999989892
+      },
+      {
+        "janela": 2,
+        "mae": 61440.9808299135,
+        "rmse": 106258.94299959886,
+        "r2": 0.9105495881546661,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.661632200000895
+      },
+      {
+        "janela": 3,
+        "mae": 66520.55532643571,
+        "rmse": 121154.5576136778,
+        "r2": 0.8802930549927223,
+        "previsoes_nao_positivas": 0,
+        "segundos": 0.7188571999977285
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+variavel,origem,regra,motivo
+has_recorded_basement,sqft_basement,1 se área do porão > 0; 0 se = 0,Separar presença de porão de seu tamanho.
+has_renovation_year,yr_renovated,1 se há ano positivo; 0 se = 0,Separar ano registrado da ausência de ano positivo.
+basement_area_ratio,sqft_basement / sqft_living,Dividir apenas com área habitável > 0,Descrever a participação do porão na área.
+living_area_per_bedroom,sqft_living / bedrooms,Dividir apenas com quartos > 0,Relacionar espaço e quantidade de quartos.
+bathrooms_per_bedroom,bathrooms / bedrooms,Dividir apenas com quartos > 0,Representar a relação entre as duas contagens.
+log_living_area,sqft_living,"log(1 + área), se não negativa",Comprimir diferenças entre áreas muito grandes.
+log_lot_area,sqft_lot,"log(1 + área), se não negativa",Comprimir a longa extensão dos tamanhos de terreno.

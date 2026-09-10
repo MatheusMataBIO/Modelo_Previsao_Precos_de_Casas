@@ -1,0 +1,5 @@
+classificacao,vendas,preco_mediano,area_mediana,grade_mediano,quartos_medianos
+Extremo nas duas regras,527,1600000.0,4120.0,10.0,4.0
+Não sinalizado,19907,430000.0,1830.0,7.0,3.0
+Somente dentro do CEP,560,755550.0,3149.0,9.0,4.0
+Somente no histórico inteiro,619,1385000.0,3530.0,10.0,4.0

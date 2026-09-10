@@ -1,0 +1,5 @@
+zipcode,faixa_renda,preco_mediano,quantidade_vendas,fora_da_caixa
+98004,4 - maior indicador,1150000.0,317,True
+98039,4 - maior indicador,1892500.0,50,True
+98118,1 - menor indicador,367500.0,508,True
+98133,1 - menor indicador,375000.0,494,True

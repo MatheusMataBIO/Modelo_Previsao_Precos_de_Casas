@@ -1,0 +1,70 @@
+{
+  "versao": "temporal_cv_v1",
+  "cenario": "vendas_posteriores_de_imoveis_nao_vistos",
+  "test_cutoff": "2015-03-10",
+  "split_counts": {
+    "train_validation": 17191,
+    "test": 4331,
+    "excluded_overlap": 91
+  },
+  "cv": {
+    "strategy": "TimeSeriesSplit_on_daily_calendar_with_id_overlap_removal",
+    "n_splits": 3,
+    "validation_days": 45,
+    "gap_days": 0,
+    "gap_assumption": "atraso_de_disponibilidade_do_preco_nao_documentado"
+  },
+  "features": [
+    "bedrooms",
+    "bathrooms",
+    "sqft_living",
+    "sqft_lot",
+    "floors",
+    "waterfront",
+    "view",
+    "condition",
+    "grade",
+    "sqft_above",
+    "sqft_basement",
+    "yr_built",
+    "yr_renovated",
+    "zipcode",
+    "lat",
+    "long",
+    "sqft_living15",
+    "sqft_lot15"
+  ],
+  "primary_metric": "mean_fold_mae",
+  "baseline_parameters": {
+    "linear_tol": 1e-06,
+    "ridge_alpha": 1.0,
+    "ridge_solver": "lsqr",
+    "ridge_tol": 1e-06
+  },
+  "resources": {
+    "cpus_logicas": 12,
+    "ram_total_gib": 15.39,
+    "ram_disponivel_gib": 6.51,
+    "threads_numericas": 2,
+    "ajustes_planejados": 9,
+    "scikit_learn": "1.9.0",
+    "fits_completed": 9,
+    "execution_seconds": 0.8846929999999702,
+    "max_observed_python_rss_mib": 227.58203125,
+    "memory_note": "amostras entre etapas, não pico exato"
+  },
+  "test_evaluated": false,
+  "limitations": [
+    "EDA anterior examinou todo o histórico",
+    "histórico curto",
+    "data dos exemplos futuros desconhecida",
+    "sem avaliação de regiões inteiramente novas"
+  ],
+  "source_sha256": {
+    "features_historico.csv": "7222604d59f48f5a55759b3a786a2813d715876830af1e07ab4b0446775001dc",
+    "identificacao_alvo_historico.csv": "0aa64f9d24125a9a64a5581378f8f2fcdac74d798d07cfa6a5aa6df5f712dea5",
+    "contrato_features.json": "e6eb87be33b373f110436dca46d69af41d490ccb3ad73662be88c7003502ed1b"
+  },
+  "split_manifest": "data/processed/split_manifest.csv",
+  "cv_manifest": "data/processed/cv_manifest.csv"
+}

@@ -1,0 +1,11 @@
+{
+  "notebooks_executados": [
+    "01_eda",
+    "02_merge_eda_complementar",
+    "03_feature_engineering",
+    "06_avaliacao_explicabilidade"
+  ],
+  "resultado": "sem erros, cada notebook em kernel novo e arquivos isolados",
+  "avaliacao": "reaproveitou o registro e os modelos congelados; sem novos ajustes",
+  "limite": "04 e 05 revisados por código e artefatos; treinamentos não reexecutados nesta verificação"
+}
