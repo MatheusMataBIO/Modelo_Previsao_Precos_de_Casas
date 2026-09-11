@@ -86,7 +86,7 @@ Detalhes: [avaliação](docs/evaluation_summary.md), [ficha do modelo](docs/mode
 | 08 | [Deploy e monitoramento](notebooks/08_deploy_monitoramento.ipynb) | Documentação de arquitetura, MLflow, monitoramento e aprendizado contínuo |
 | 09 | [Comunicação](notebooks/09_comunicacao_stakeholders.ipynb) | Apresentação em Markdown com resultados e gráficos |
 
-**API, Docker, infraestrutura, MLflow e API externa de LLM são propostas documentais, sem implementação ou publicação.** A LLM proposta redigiria explicações a partir de fatos verificados; o preço continuaria sendo calculado pelo LightGBM. Os diagramas e o reentreinamento proposto estão no notebook 08 e em [deployment.md](docs/deployment.md).
+**API, Docker, infraestrutura, MLflow e API externa de LLM são propostas documentais, sem implementação ou publicação.** A LLM proposta redigiria explicações a partir de fatos verificados; o preço continuaria sendo calculado pelo LightGBM. Os diagramas e o retreinamento proposto estão no notebook 08 e em [deployment.md](docs/deployment.md).
 
 `data/raw/` preserva os arquivos recebidos; `data/processed/` guarda merges, features e partições; `artifacts/` contém os pipelines e contratos; `reports/` contém métricas, gráficos e previsões. `reports/archive/` guarda resultados antigos, fora da avaliação atual.
 
